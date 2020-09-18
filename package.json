@@ -1,0 +1,33 @@
+{
+  "name": "bitcoin-microservice",
+  "version": "1.0.0",
+  "description": "Api service that provides Bitcoin, Etherium and BUSD wallet address",
+  "main": "pandar.js",
+  "scripts": {
+    "test": "sandbox"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SilverC0de/crypto-microservice.git"
+  },
+  "keywords": [
+    "bitcoin",
+    "crypto",
+    "blockchain",
+    "etherium",
+    "busd"
+  ],
+  "author": "Balogun Silver",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SilverC0de/crypto-microservice/issues"
+  },
+  "homepage": "https://github.com/SilverC0de/crypto-microservice#readme",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "dotenv": "^8.2.0",
+    "env": "0.0.2",
+    "express": "^4.17.1",
+    "helmet": "^4.1.1"
+  }
+}
