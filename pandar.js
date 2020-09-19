@@ -19,10 +19,6 @@ api.use(express.json())
 api.use(express.urlencoded({ extended: true }))
 
 
-const btc = bitgo.coin('tbtc') //btc
-const eth = bitgo.coin('tetc') //eth
-//const busd = bitgo.coin('busd') //busd, usdt
-
 
 api.use(helmet.contentSecurityPolicy())
 api.use(helmet.expectCt())
@@ -56,7 +52,7 @@ const validateJSON = (request, response, next) => {
 
 
 api.get('/wallet/new/:type', [
-    check('type').isIn(['tbtc', 'teth', 'busd']).withMessage('Wallet must either be btc eth or busd')
+    check('type').isIn(['tbtc', 'teth', 'busd', 'dash']).withMessage('Wallet must either be btc, eth, dash or busd')
 ], validateJSON, (request, response) => {
     let walletx
     var type = request.params.type
@@ -84,7 +80,7 @@ api.get('/wallet/new/:type', [
                     'status' : true,
                     'message' : 'Wallet address has been generated',
                     'wallet' : walletID,
-                    'address' : address
+                    'data' : address
                 })
 
             })
