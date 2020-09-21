@@ -15,8 +15,17 @@ api.use(helmet.xssFilter())
 api.use(helmet.frameguard())
 
 
+//setup mysql
+sql = mysql.createConnection({
+    host: process.env.DB_HOST,
+    user: process.env.DB_USER,
+    password: process.env.DB_PASS,
+    database: process.env.DB_NAME
+  })
+  
+
 //require major routes
-require('./routes')(api)
+require('./crypto')(api)
 
 
 api.get('/', (request, response) => {
