@@ -28,7 +28,7 @@ sql = mysql.createConnection({
 //require major routes
 require('./crypto')(api)
 
-//setup current
+//setup current version
 //api.use('/v3', crypto)
 
 api.get('/', (request, response) => {
