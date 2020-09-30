@@ -2,6 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const mysql = require('mysql')
 const helmet = require('helmet')
+const { request } = require('express')
 const api = express()
 
 
@@ -27,6 +28,8 @@ sql = mysql.createConnection({
 //require major routes
 require('./crypto')(api)
 
+//setup current
+//api.use('/v3', crypto)
 
 api.get('/', (request, response) => {
     response.status(200).send('PandarJS microservice online')

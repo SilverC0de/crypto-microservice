@@ -4,7 +4,7 @@
   "description": "Api service that provides Bitcoin, Etherium and BUSD wallet address",
   "main": "pandar.js",
   "scripts": {
-    "test": "sandbox"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -31,6 +31,7 @@
     "express": "^4.17.1",
     "express-validator": "^6.6.1",
     "helmet": "^4.1.1",
+    "jest": "^26.4.2",
     "jsonwebtoken": "^8.5.1",
     "moment": "^2.28.0",
     "mysql": "^2.18.1"
