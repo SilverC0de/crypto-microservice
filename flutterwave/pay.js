@@ -56,6 +56,7 @@ router.route('/pay').post([
 
 ], validateJSON, validateJWT, (request, response) => {
     //check balance and all then send out
+    
 })
 
 
