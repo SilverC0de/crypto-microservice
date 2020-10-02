@@ -26,10 +26,9 @@ sql = mysql.createConnection({
   
 
 //require major routes
-require('./crypto')(api)
+require('./routes')(api)
 
-//setup current version
-//api.use('/v3', crypto)
+
 
 api.get('/', (request, response) => {
     response.status(200).send('PandarJS microservice online')
